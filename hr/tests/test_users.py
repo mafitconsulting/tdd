@@ -49,7 +49,7 @@ def test_users_update(mocker):
     user.
     """
     mocker.patch('subprocess.call')
-    users.update(user_dict)
+    users.modify(user_dict)
     subprocess.call.assert_called_with([
         'usermod',
         '-p',
